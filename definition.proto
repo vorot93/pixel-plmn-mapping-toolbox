@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message CarrierMap {
+  repeated CarrierEntry entry = 1;
+}
+
+message CarrierEntry {
+  repeated int32 plmns = 1;
+  optional int32 carrier_id = 2;
+  optional string identifier = 3;
+}

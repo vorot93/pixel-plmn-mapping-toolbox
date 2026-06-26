@@ -1,0 +1,24 @@
+[package]
+name = "pixel-plmn-mapping-toolbox"
+version = "0.1.0"
+edition = "2024"
+authors = ["Artem Vorotnikov <artem@vorotnikov.me>"]
+license = "GPL-3.0-only"
+
+[[bin]]
+name = "pixel-plmn-mapping-editor"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+protobuf = "3"
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+toml = "1"
+
+[build-dependencies]
+protobuf-codegen = "3"
+
+[dev-dependencies]
+assert_cmd = "2"
